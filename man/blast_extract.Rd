@@ -7,11 +7,18 @@
 blast_extract(blast_data, bacteria_gene, evalues = 1 * 10^-10)
 }
 \arguments{
-\item{evalues}{}
+\item{blast_data}{a blast tibble using read_blast function}
+
+\item{bacteria_gene}{List of bacteria genes (result of domain_extract)}
+
+\item{evalues}{threshold for evalues to filter (default = 1*10^-10)}
 }
 \value{
-
+refenrece gene list coressponding to query genes
 }
 \description{
 Extract the reference genes corresponding to the query genes from the blast results
+}
+\examples{
+
 }

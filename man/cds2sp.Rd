@@ -10,7 +10,7 @@ cds2sp(cds_data)
 \item{cds_data}{}
 }
 \value{
-
+splicing point list
 }
 \description{
 Extract splicing point from cds data

@@ -7,11 +7,16 @@
 domain_extract(interpro, domain)
 }
 \arguments{
-\item{domain}{}
+\item{interpro}{interproscan results from tsv output files using read_tsv}
+
+\item{domain}{Pfam ID you want to specify}
 }
 \value{
-
+genelist
 }
 \description{
 Extract the genes corresponding to the domains from the inteproscan results
+}
+\examples{
+
 }

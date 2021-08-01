@@ -66,6 +66,7 @@ lenlist2chain <- function(gene_length, gene_list){
 #'
 #' @import tibble
 #' @import dplyr
+#' @import stringr
 #'
 #' @examples
 bind_draws <- function(domain_data, chain_data, splice_data = NA){
@@ -85,4 +86,24 @@ bind_draws <- function(domain_data, chain_data, splice_data = NA){
       mutate(entryName = entryName_psuedo)
   }
   return(all_draw)
+}
+
+#' Title
+#'
+#' @param draw_data
+#'
+#' @return ggplot object of drawProteins
+#' @export
+#'
+#' @import drawProteins
+#'
+#' @examples
+draw_all <- function(draw_data){
+  p_chavas <-  draw_canvas(draw_data)
+  p_chavas <-  draw_chains(p_chavas, draw_data, label_chains = FALSE)
+  p_chavas <- draw_domains(p_chavas, draw_data, label_domains = FALSE)
+  p_chavas <- draw_motif(p_chavas, draw_data)
+  p_chavas <- draw_phospho(p_chavas, draw_data, show.legend = FALSE)
+  p_chavas <- p_chavas
+  return(p_chavas)
 }

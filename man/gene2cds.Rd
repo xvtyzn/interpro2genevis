@@ -10,7 +10,7 @@ gene2cds(gene_data)
 \item{gene_data}{}
 }
 \value{
-
+cds list
 }
 \description{
 Extract cds data from gene datafram

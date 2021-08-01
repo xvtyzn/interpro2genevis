@@ -15,4 +15,9 @@ Roxygen: list(markdown = TRUE)
 RoxygenNote: 7.1.1
 Imports: 
     dplyr,
+    drawProteins,
+    gggenomes (>= 0.9.1.9000),
+    stringr,
     tibble
+Remotes:  
+    thackl/gggenomes

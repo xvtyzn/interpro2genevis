@@ -1,13 +1,15 @@
 #' Convert gff to gggenomes data
 #'
-#' @param gff_data
-#' @param gene_list
-#' @param aten
 #'
-#' @return
-#' @export
+#'
+#' @param gff_data gff tible from gff files using read_gff function
+#' @param gene_list genelist provided by blast_extract or domain_extract
+#' @param aten if your gff data is acropora tenuis genome (default = TRUE)
+#' @return gff tibble coressponding to specified gene_list
 #'
 #' @examples
+#'
+#' @export
 rename_seq <- function(gff_data, gene_list, aten = TRUE){
   renamed_genes <- gff_data %>%
     dplyr::filter(parent_ids %in% gene_list |
@@ -26,7 +28,7 @@ rename_seq <- function(gff_data, gene_list, aten = TRUE){
 #'
 #' @param gene_data
 #'
-#' @return
+#' @return cds list
 #' @export
 #'
 #' @examples
@@ -42,7 +44,7 @@ gene2cds <- function(gene_data){
 #'
 #' @param cds_data
 #'
-#' @return
+#' @return splicing point list
 #' @export
 #'
 #' @examples

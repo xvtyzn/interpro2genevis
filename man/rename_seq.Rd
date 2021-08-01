@@ -7,11 +7,18 @@
 rename_seq(gff_data, gene_list, aten = TRUE)
 }
 \arguments{
-\item{aten}{}
+\item{gff_data}{gff tible from gff files using read_gff function}
+
+\item{gene_list}{genelist provided by blast_extract or domain_extract}
+
+\item{aten}{if your gff data is acropora tenuis genome (default = TRUE)}
 }
 \value{
-
+gff tibble coressponding to specified gene_list
 }
 \description{
 Convert gff to gggenomes data
+}
+\examples{
+
 }
